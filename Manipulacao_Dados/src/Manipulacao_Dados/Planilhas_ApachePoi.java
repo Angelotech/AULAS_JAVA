@@ -14,7 +14,7 @@ public class Planilhas_ApachePoi {
 		
 		/*CRIACAO DOS ARQUIVO*/
 		
-		File file = new File("C:\\Users\\angel\\eclipse-workspace\\Manipulacao_Dados\\src\\Manipulacao_Dados\\documento.xls");		
+		File file = new File("C:\\Users\\angel\\eclipse-workspace\\Manipulacao_Dados\\src\\Manipulacao_Dados\\Ficha_De_Cadrastro1.xls");		
 		
 		if (!file.exists()) {
 			file.createNewFile();		
@@ -25,12 +25,14 @@ public class Planilhas_ApachePoi {
 		dados.setNome("angelo");
 		dados.setPais("brasil");
 		dados.setCpf("1111111111");
+		dados.setIdade(25);
 		
 		
 		Dados dados1 = new Dados();
 		dados1.setNome("luiz");
 		dados1.setPais("venezuela");
 		dados1.setCpf("511.444.555.444-85");
+		dados1.setIdade(20);
 		
 		
 		/*CRIACAO DA LISTA*/
@@ -66,6 +68,7 @@ public class Planilhas_ApachePoi {
 					}/*FIM DA CRIACAO DA PLANILHA*/
 					
 						FileOutputStream arquivo = new FileOutputStream(file);
+						
 						workbook.write(arquivo);
 						arquivo.flush();
 						arquivo.close();
