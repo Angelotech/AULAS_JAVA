@@ -1,22 +1,15 @@
 package org.example;
 
-
-import Reservas.Reservas;
-import Reservas.ReservasVip;
+import pro.Relatorio;
 
 public class Main {
     public static void main(String[] args) {
 
         System.out.println("Hello, World!");
 
+        Relatorio r = new Relatorio("o homem de aço ","super-heroi");
+        r.imprimir();
 
-        Reservas r = new Reservas();
-        ReservasVip vip = new ReservasVip();
-        r.reservar();
-        r.reservar("10/04");
-        r.reservar("12/04", 4);
-
-        vip.reservar();
 
 
 
